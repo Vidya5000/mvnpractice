@@ -14,7 +14,7 @@ pipeline {
         }
         stage('tomact deploy') {
             steps{
-                sshagent(['tomcat-creds']) {
+                sshagent(['tomcat-dev']) {
                     echo "tomacat depolying in jenkins"
                     sh "scp -o strictHostKeyChecking=no target/*.war ec2-user@172.31.29.151:/opt/tomcat9/webapps/"
                     sh "ssh ec2-user@172.31.29.151 /opt/tomcat9/bin/shutdown.sh"
