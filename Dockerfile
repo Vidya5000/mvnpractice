@@ -6,13 +6,13 @@ WORKDIR /opt
 
 ADD  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.106/bin/apache-tomcat-9.0.106.tar.gz .
 
-RUN tar xf apache-tomcat-11.0.7.tar.gz
+RUN tar xf apache-tomcat-9.0.106.tar.gz
  
-RUN rm -rf apache-tomcat-11.0.7.tar.gz
+RUN rm -rf apache-tomcat-9.0.106.tar.gz
 
-RUN mv apache-tomcat-11.0.7 tomcat11
+RUN mv apache-tomcat-9.0.106 tomcat9
 
-COPY target/mvnpractice.war /opt/tomcat11/webapps
+COPY target/mvnpractice.war /opt/tomcat9/webapps
 
 EXPOSE 8080
 
