@@ -4,7 +4,7 @@ RUN  apk add openjdk17-jre
 
 WORKDIR /opt
 
-ADD  https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.7/bin/apache-tomcat-11.0.7.tar.gz .
+ADD  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.106/bin/apache-tomcat-9.0.106.tar.gz .
 
 RUN tar xf apache-tomcat-11.0.7.tar.gz
  
